@@ -5,3 +5,4 @@ google-generativeai
 openai
 langchain-openai
 wikipedia
+python-dotenv

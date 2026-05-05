@@ -1,0 +1,1045 @@
+[
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "LOCATED_IN",
+    "object": "San Francisco",
+    "object_type": "LOCATION"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_IN",
+    "object": "2021",
+    "object_type": "YEAR"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_BY",
+    "object": "Daniela Amodei",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_BY",
+    "object": "Dario Amodei",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Dario Amodei",
+    "subject_type": "PERSON",
+    "relation": "CEO_OF",
+    "object": "Anthropic",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Daniela Amodei",
+    "subject_type": "PERSON",
+    "relation": "WORKED_AT",
+    "object": "Anthropic",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Dario Amodei",
+    "subject_type": "PERSON",
+    "relation": "WORKED_AT",
+    "object": "OpenAI",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Daniela Amodei",
+    "subject_type": "PERSON",
+    "relation": "WORKED_AT",
+    "object": "OpenAI",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_BY",
+    "object": "Jack Clark",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_BY",
+    "object": "Jared Kaplan",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_BY",
+    "object": "Chris Olah",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Claude",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Claude Code",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "constitutional AI",
+    "object_type": "TECHNOLOGY"
+  },
+  {
+    "subject": "Bun",
+    "subject_type": "COMPANY",
+    "relation": "ACQUIRED_BY",
+    "object": "Anthropic",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "COMPETES_WITH",
+    "object": "OpenAI",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "ChatGPT",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Amazon",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Google",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "FTX",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Microsoft",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Nvidia",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "Amazon",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "Google",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "Snowflake Inc.",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "Palantir",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "United States Department of Defense",
+    "object_type": "ORGANIZATION"
+  },
+  {
+    "subject": "Jan Leike",
+    "subject_type": "PERSON",
+    "relation": "WORKED_AT",
+    "object": "OpenAI",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Jan Leike",
+    "subject_type": "PERSON",
+    "relation": "WORKED_AT",
+    "object": "Anthropic",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Claude 2",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "LOCATED_IN",
+    "object": "Canada",
+    "object_type": "LOCATION"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_IN",
+    "object": "2019",
+    "object_type": "YEAR"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_BY",
+    "object": "Aidan Gomez",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_BY",
+    "object": "Ivan Zhang",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_BY",
+    "object": "Nick Frosst",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "LOCATED_IN",
+    "object": "Toronto",
+    "object_type": "LOCATION"
+  },
+  {
+    "subject": "Aidan Gomez",
+    "subject_type": "PERSON",
+    "relation": "CEO_OF",
+    "object": "Cohere",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Aleph Alpha",
+    "subject_type": "COMPANY",
+    "relation": "ACQUIRED_BY",
+    "object": "Cohere",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Ottogrid",
+    "subject_type": "COMPANY",
+    "relation": "ACQUIRED_BY",
+    "object": "Cohere",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "COMPETES_WITH",
+    "object": "OpenAI",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "large language model",
+    "object_type": "TECHNOLOGY"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "generative AI",
+    "object_type": "TECHNOLOGY"
+  },
+  {
+    "subject": "Cohere Labs",
+    "subject_type": "ORGANIZATION",
+    "relation": "DEVELOPED",
+    "object": "Aya Vision",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "multilingual AI model",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Cohere North",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "Google Cloud",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "Oracle",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "Salesforce",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "Fujitsu",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "SAP",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "Dell Technologies",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Cohere",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "Government of Canada",
+    "object_type": "ORGANIZATION"
+  },
+  {
+    "subject": "Index Ventures",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Cohere",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Radical Ventures",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Cohere",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Tiger Global",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Cohere",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Inovia Capital",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Cohere",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Nvidia",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Cohere",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Cisco",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Cohere",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "AMD",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Cohere",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Government of Canada",
+    "subject_type": "ORGANIZATION",
+    "relation": "INVESTED_BY",
+    "object": "Cohere",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "LOCATED_IN",
+    "object": "Paris",
+    "object_type": "LOCATION"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_IN",
+    "object": "2023",
+    "object_type": "YEAR"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_BY",
+    "object": "Arthur Mensch",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_BY",
+    "object": "Guillaume Lample",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_BY",
+    "object": "Timothée Lacroix",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Arthur Mensch",
+    "subject_type": "PERSON",
+    "relation": "WORKED_AT",
+    "object": "Google DeepMind",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Guillaume Lample",
+    "subject_type": "PERSON",
+    "relation": "WORKED_AT",
+    "object": "Meta Platforms",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Timothée Lacroix",
+    "subject_type": "PERSON",
+    "relation": "WORKED_AT",
+    "object": "Meta Platforms",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Lightspeed Venture Partners",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Eric Schmidt",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Andreessen Horowitz",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Microsoft",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "ASML",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "CMA CGM",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Le Chat",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Mistral 7B",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Mixtral 8x7B",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Mistral Small 3.1",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Mistral Large 3",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Mistral AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Devstral Small 2",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Black Forest Labs",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Flux Pro",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "GPT-4",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Meta Platforms",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "LLaMA-2",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Anthropic",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Claude 2",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Mixtral 8x7B",
+    "subject_type": "PRODUCT",
+    "relation": "COMPETES_WITH",
+    "object": "GPT-3.5",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Mixtral 8x7B",
+    "subject_type": "PRODUCT",
+    "relation": "COMPETES_WITH",
+    "object": "GPT-4",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Mixtral 8x7B",
+    "subject_type": "PRODUCT",
+    "relation": "COMPETES_WITH",
+    "object": "LLaMA-2",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Mixtral 8x7B",
+    "subject_type": "PRODUCT",
+    "relation": "COMPETES_WITH",
+    "object": "Claude 2",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Devstral Small 2",
+    "subject_type": "PRODUCT",
+    "relation": "COMPETES_WITH",
+    "object": "Qwen 3 Coder Flash",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "FOUNDED_IN",
+    "object": "2015",
+    "object_type": "YEAR"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "LOCATED_IN",
+    "object": "San Francisco",
+    "object_type": "LOCATION"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "LOCATED_IN",
+    "object": "Delaware",
+    "object_type": "LOCATION"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "FOUNDED_BY",
+    "object": "Elon Musk",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "FOUNDED_BY",
+    "object": "Sam Altman",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "FOUNDED_BY",
+    "object": "Ilya Sutskever",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "FOUNDED_BY",
+    "object": "Greg Brockman",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Sam Altman",
+    "subject_type": "PERSON",
+    "relation": "CEO_OF",
+    "object": "OpenAI",
+    "object_type": "ORGANIZATION"
+  },
+  {
+    "subject": "Elon Musk",
+    "subject_type": "PERSON",
+    "relation": "WORKED_AT",
+    "object": "OpenAI",
+    "object_type": "ORGANIZATION"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "DEVELOPED",
+    "object": "GPT family of large language models",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "DEVELOPED",
+    "object": "DALL-E series of text-to-image models",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "DEVELOPED",
+    "object": "Sora series of text-to-video models",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "DEVELOPED",
+    "object": "ChatGPT",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "DEVELOPED",
+    "object": "OpenAI Gym",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "DEVELOPED",
+    "object": "Universe",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "DEVELOPED",
+    "object": "Stargate supercomputer project",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "INVESTED_BY",
+    "object": "Microsoft",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "INVESTED_BY",
+    "object": "SoftBank",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "INVESTED_BY",
+    "object": "Nvidia",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "INVESTED_BY",
+    "object": "Amazon",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "INVESTED_BY",
+    "object": "Elon Musk",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "INVESTED_BY",
+    "object": "Amazon Web Services (AWS)",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "OpenAI LP",
+    "subject_type": "ORGANIZATION",
+    "relation": "INVESTED_BY",
+    "object": "Microsoft",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "PARTNERS_WITH",
+    "object": "Oracle",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "PARTNERS_WITH",
+    "object": "MGX",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "PARTNERS_WITH",
+    "object": "Anthropic",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "PARTNERS_WITH",
+    "object": "Google",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "OpenAI",
+    "subject_type": "ORGANIZATION",
+    "relation": "PARTNERS_WITH",
+    "object": "xAI",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "OpenAI Group PBC",
+    "subject_type": "ORGANIZATION",
+    "relation": "INVESTED_BY",
+    "object": "OpenAI Foundation",
+    "object_type": "ORGANIZATION"
+  },
+  {
+    "subject": "OpenAI Group PBC",
+    "subject_type": "ORGANIZATION",
+    "relation": "INVESTED_BY",
+    "object": "Microsoft",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "LOCATED_IN",
+    "object": "United States",
+    "object_type": "LOCATION"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_IN",
+    "object": "2022",
+    "object_type": "YEAR"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_BY",
+    "object": "Aravind Srinivas",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_BY",
+    "object": "Denis Yarats",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_BY",
+    "object": "Johnny Ho",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "FOUNDED_BY",
+    "object": "Andy Konwinski",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Aravind Srinivas",
+    "subject_type": "PERSON",
+    "relation": "CEO_OF",
+    "object": "Perplexity AI",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Aravind Srinivas",
+    "subject_type": "PERSON",
+    "relation": "WORKED_AT",
+    "object": "OpenAI",
+    "object_type": "ORGANIZATION"
+  },
+  {
+    "subject": "Aravind Srinivas",
+    "subject_type": "PERSON",
+    "relation": "WORKED_AT",
+    "object": "Google DeepMind",
+    "object_type": "ORGANIZATION"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "web search engine",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Sonar (search engine)",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Sonar (model)",
+    "object_type": "TECHNOLOGY"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "R1 1776",
+    "object_type": "TECHNOLOGY"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Perplexity Pro",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Model Council",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Comet",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Shopping Hub",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Google Chrome extension",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "iOS app",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Android app",
+    "object_type": "PRODUCT"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Jeff Bezos",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Nvidia",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Databricks",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "1789 Capital",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "INVESTED_BY",
+    "object": "Cristiano Ronaldo",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "Cristiano Ronaldo",
+    "object_type": "PERSON"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "Microsoft Azure",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Perplexity AI",
+    "subject_type": "COMPANY",
+    "relation": "PARTNERS_WITH",
+    "object": "Truth Social",
+    "object_type": "COMPANY"
+  },
+  {
+    "subject": "Meta",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "Llama 3.3",
+    "object_type": "TECHNOLOGY"
+  },
+  {
+    "subject": "DeepSeek",
+    "subject_type": "COMPANY",
+    "relation": "DEVELOPED",
+    "object": "DeepSeek R1",
+    "object_type": "TECHNOLOGY"
+  }
+]
