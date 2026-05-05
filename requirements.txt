@@ -1,0 +1,7 @@
+neo4j
+pandas
+langchain
+google-generativeai
+openai
+langchain-openai
+wikipedia
