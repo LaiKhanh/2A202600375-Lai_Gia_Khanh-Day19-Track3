@@ -3,19 +3,12 @@ import json
 import re
 from pathlib import Path
 import sys
-import google.generativeai as genai
+import time
 
 import dotenv
 dotenv.load_dotenv()
 
-API_KEY = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY") or os.getenv("GENAI_API_KEY")
-if not API_KEY:
-    sys.exit(
-        "No API key found. Set the GEMINI_API_KEY (or GOOGLE_API_KEY / GENAI_API_KEY) environment variable."
-    )
-
-genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel("gemini-2.5-flash")
+import llm_client
 
 PROMPT = """
 You are an information extraction system.
@@ -70,18 +63,26 @@ def clean_json(text):
 def extract_from_file(filepath):
     text = Path(filepath).read_text(encoding="utf-8")[:15000]
 
-    response = model.generate_content(
-        PROMPT + "\n\nTEXT:\n" + text
-    )
+    prompt_text = PROMPT + "\n\nTEXT:\n" + text
 
-    cleaned = clean_json(response.text)
+    try:
+        response_text, meta = llm_client.generate(
+            prompt_text,
+            model=os.getenv("LLM_MODEL") or os.getenv("GEMINI_MODEL") or "gpt-oss:20b-cloud",
+            return_meta=True,
+        )
+    except Exception as e:
+        print("LLM call failed for", filepath, e)
+        return [], {"duration_s": 0, "total_tokens_est": 0}
+
+    cleaned = clean_json(response_text)
 
     try:
         triples = json.loads(cleaned)
-        return triples
+        return triples, meta
     except Exception as e:
         print("JSON parse error:", filepath, e)
-        return []
+        return [], meta
 
 
 def main():
@@ -90,18 +91,33 @@ def main():
     output_dir.mkdir(exist_ok=True)
 
     all_triples = []
+    metrics = []
 
     files = list(input_dir.glob("*.txt"))
 
     for file in files:
         print("processing:", file.name)
-        triples = extract_from_file(file)
+        triples, meta = extract_from_file(file)
         all_triples.extend(triples)
+
+        metrics.append({
+            "file": file.name,
+            "n_triples": len(triples),
+            "duration_s": meta.get("duration_s") if isinstance(meta, dict) else None,
+            "prompt_tokens_est": meta.get("prompt_tokens_est") if isinstance(meta, dict) else None,
+            "response_tokens_est": meta.get("response_tokens_est") if isinstance(meta, dict) else None,
+            "total_tokens_est": meta.get("total_tokens_est") if isinstance(meta, dict) else None,
+            "model": meta.get("model") if isinstance(meta, dict) else None,
+        })
 
     with open(output_dir / "triples.json", "w", encoding="utf-8") as f:
         json.dump(all_triples, f, indent=2, ensure_ascii=False)
 
-    print("saved outputs/triples.json")
+    # write extraction metrics
+    with open(output_dir / "graph_extraction_metrics.json", "w", encoding="utf-8") as f:
+        json.dump(metrics, f, indent=2, ensure_ascii=False)
+
+    print("saved outputs/triples.json and outputs/graph_extraction_metrics.json")
 
 
 if __name__ == "__main__":

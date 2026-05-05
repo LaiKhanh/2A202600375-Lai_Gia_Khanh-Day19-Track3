@@ -13,7 +13,7 @@ import json
 import requests
 
 
-def _ollama_generate(prompt: str, model: str | None = None, temperature: float | None = None) -> str:
+def _ollama_generate(prompt: str, model: str | None = None, temperature: float | None = None):
     host = os.getenv("OLLAMA_HOST", "http://localhost:11434")
     api_key = os.getenv("OLLAMA_API_KEY")
     model = model or os.getenv("LLM_MODEL") or os.getenv("GEMINI_MODEL") or "gpt-oss:20b-cloud"
@@ -33,28 +33,34 @@ def _ollama_generate(prompt: str, model: str | None = None, temperature: float |
     try:
         data = resp.json()
     except ValueError:
-        return resp.text
+        text = resp.text
+        return text, {}
 
     # Common response shapes returned by various Ollama deployments
+    text = None
     if isinstance(data, dict):
         if "text" in data:
-            return data["text"]
-        if "output" in data:
-            return data["output"]
-        if "result" in data:
-            return data["result"]
-        if "choices" in data and len(data["choices"]) > 0:
+            text = data["text"]
+        elif "output" in data:
+            text = data["output"]
+        elif "result" in data:
+            text = data["result"]
+        elif "choices" in data and len(data["choices"]) > 0:
             c = data["choices"][0]
             if isinstance(c, dict):
                 if "message" in c and isinstance(c["message"], dict) and "content" in c["message"]:
-                    return c["message"]["content"]
-                if "content" in c:
-                    return c["content"]
+                    text = c["message"]["content"]
+                elif "content" in c:
+                    text = c["content"]
 
-    return json.dumps(data)
+    if text is None:
+        # fallback: return full JSON as string
+        return json.dumps(data), data
+
+    return text, data
 
 
-def _genai_generate(prompt: str, model: str | None = None) -> str:
+def _genai_generate(prompt: str, model: str | None = None):
     import google.generativeai as genai
 
     key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY") or os.getenv("GENAI_API_KEY")
@@ -64,17 +70,68 @@ def _genai_generate(prompt: str, model: str | None = None) -> str:
     genai.configure(api_key=key)
     model_name = model or os.getenv("GEMINI_MODEL")
     model_obj = genai.GenerativeModel(model_name)
-    return model_obj.generate_content(prompt).text
+    resp = model_obj.generate_content(prompt)
+
+    # Try to return both text and the raw response for metadata inspection
+    text = getattr(resp, "text", None)
+    try:
+        raw = resp
+    except Exception:
+        raw = None
+
+    if text is None:
+        # Try common dict shapes
+        try:
+            d = resp.to_dict()
+        except Exception:
+            d = None
+        if isinstance(d, dict):
+            if "candidates" in d and len(d["candidates"])>0:
+                cand = d["candidates"][0]
+                text = cand.get("content") or cand.get("text")
+        if text is None:
+            text = str(resp)
+
+    return text, raw
 
 
-def generate(prompt: str, model: str | None = None, temperature: float | None = None) -> str:
+def generate(prompt: str, model: str | None = None, temperature: float | None = None, return_meta: bool = False) -> str:
     """Generate text using Ollama if configured, otherwise use Google Generative AI.
 
     - Set `OLLAMA_HOST` (e.g. https://cloud.ollama.com or http://localhost:11434) to use Ollama.
     - Or set `USE_OLLAMA=1` to force Ollama usage.
     - Otherwise the function falls back to Google GenAI and requires the usual API key env vars.
     """
-    if os.getenv("OLLAMA_HOST") or os.getenv("USE_OLLAMA") == "1":
-        return _ollama_generate(prompt, model=model, temperature=temperature)
+    import time
 
-    return _genai_generate(prompt, model=model)
+    start = time.perf_counter()
+
+    if os.getenv("OLLAMA_HOST") or os.getenv("USE_OLLAMA") == "1":
+        text, raw = _ollama_generate(prompt, model=model, temperature=temperature)
+    else:
+        text, raw = _genai_generate(prompt, model=model)
+
+    elapsed = time.perf_counter() - start
+
+    # token estimation heuristic: 1 token ~= 4 characters
+    prompt_chars = len(prompt or "")
+    resp_chars = len(text or "")
+    prompt_tokens_est = int(round(prompt_chars / 4))
+    response_tokens_est = int(round(resp_chars / 4))
+    total_tokens_est = prompt_tokens_est + response_tokens_est
+
+    meta = {
+        "model": model or os.getenv("LLM_MODEL") or os.getenv("GEMINI_MODEL"),
+        "duration_s": elapsed,
+        "prompt_chars": prompt_chars,
+        "response_chars": resp_chars,
+        "prompt_tokens_est": prompt_tokens_est,
+        "response_tokens_est": response_tokens_est,
+        "total_tokens_est": total_tokens_est,
+        "raw": raw,
+    }
+
+    if return_meta:
+        return text, meta
+
+    return text

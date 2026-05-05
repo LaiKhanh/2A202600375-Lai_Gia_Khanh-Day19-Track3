@@ -1,0 +1,47 @@
+[
+  {
+    "file": "Anthropic.txt",
+    "n_triples": 9,
+    "duration_s": 15.834349300013855,
+    "prompt_tokens_est": 3928,
+    "response_tokens_est": 3426,
+    "total_tokens_est": 7354,
+    "model": "gpt-oss:20b-cloud"
+  },
+  {
+    "file": "Cohere.txt",
+    "n_triples": 9,
+    "duration_s": 10.57458860008046,
+    "prompt_tokens_est": 2357,
+    "response_tokens_est": 2131,
+    "total_tokens_est": 4488,
+    "model": "gpt-oss:20b-cloud"
+  },
+  {
+    "file": "Mistral_AI.txt",
+    "n_triples": 9,
+    "duration_s": 23.145467599853873,
+    "prompt_tokens_est": 1456,
+    "response_tokens_est": 4816,
+    "total_tokens_est": 6272,
+    "model": "gpt-oss:20b-cloud"
+  },
+  {
+    "file": "OpenAI.txt",
+    "n_triples": 9,
+    "duration_s": 16.364242900162935,
+    "prompt_tokens_est": 3928,
+    "response_tokens_est": 3394,
+    "total_tokens_est": 7322,
+    "model": "gpt-oss:20b-cloud"
+  },
+  {
+    "file": "Perplexity AI.txt",
+    "n_triples": 9,
+    "duration_s": 20.047570399940014,
+    "prompt_tokens_est": 3202,
+    "response_tokens_est": 4332,
+    "total_tokens_est": 7534,
+    "model": "gpt-oss:20b-cloud"
+  }
+]

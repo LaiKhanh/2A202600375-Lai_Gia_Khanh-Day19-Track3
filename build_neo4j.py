@@ -1,6 +1,7 @@
 import os
 import json
 import re
+from pathlib import Path
 from neo4j import GraphDatabase
 
 import dotenv
@@ -131,11 +132,78 @@ def main():
 
     print("triples after dedup:", len(triples))
 
+    # measure insertion time
+    import time
+    insertion_times = []
+
+    insertion_start = time.perf_counter()
     with driver.session() as session:
         for triple in triples:
+            t0 = time.perf_counter()
             session.execute_write(push_triple, triple)
+            t1 = time.perf_counter()
+            insertion_times.append(t1 - t0)
+    insertion_total = time.perf_counter() - insertion_start
+
+    # save insertion metrics
+    insertion_metrics = {
+        "n_triples": len(triples),
+        "total_insertion_time_s": insertion_total,
+        "avg_time_per_triple_s": (sum(insertion_times) / len(insertion_times)) if insertion_times else 0,
+        "per_triple_times": insertion_times[:1000]
+    }
+
+    with open("outputs/graph_insertion_metrics.json", "w", encoding="utf-8") as f:
+        json.dump(insertion_metrics, f, indent=2, ensure_ascii=False)
 
     print("graph inserted into neo4j")
+    print("saved outputs/graph_insertion_metrics.json")
+
+    # try to produce a combined markdown analysis if extraction metrics exist
+    extraction_metrics_path = Path("outputs/graph_extraction_metrics.json")
+    md_path = Path("outputs/graph_cost_analysis.md")
+
+    total_prompt_tokens = 0
+    total_response_tokens = 0
+    total_token_est = 0
+    total_extract_time = 0
+    n_files = 0
+
+    if extraction_metrics_path.exists():
+        with open(extraction_metrics_path, "r", encoding="utf-8") as f:
+            em = json.load(f)
+        n_files = len(em)
+        for entry in em:
+            total_prompt_tokens += entry.get("prompt_tokens_est") or 0
+            total_response_tokens += entry.get("response_tokens_est") or 0
+            total_token_est += entry.get("total_tokens_est") or 0
+            total_extract_time += entry.get("duration_s") or 0
+
+    # write markdown summary
+    lines = []
+    lines.append("# Graph Build Cost Analysis")
+    lines.append("")
+    lines.append("## Extraction (LLM) metrics")
+    lines.append("")
+    lines.append(f"- Files processed: {n_files}")
+    lines.append(f"- Total estimated prompt tokens: {total_prompt_tokens}")
+    lines.append(f"- Total estimated response tokens: {total_response_tokens}")
+    lines.append(f"- Total estimated tokens (prompt+response): {total_token_est}")
+    lines.append(f"- Total extraction time (s): {total_extract_time:.2f}")
+    lines.append("")
+    lines.append("## Insertion (Neo4j) metrics")
+    lines.append("")
+    lines.append(f"- Triples inserted: {insertion_metrics['n_triples']}")
+    lines.append(f"- Total insertion time (s): {insertion_metrics['total_insertion_time_s']:.2f}")
+    lines.append(f"- Average time per triple (s): {insertion_metrics['avg_time_per_triple_s']:.4f}")
+    lines.append("")
+    lines.append("## Notes")
+    lines.append("")
+    lines.append("- Token counts are heuristic estimates (1 token ≈ 4 characters). If your LLM provider returns exact token usage, prefer those values.")
+    lines.append("- Extraction time includes the LLM call duration for each file; insertion time measures the Python call to create nodes/relationships in Neo4j.")
+
+    md_path.write_text("\n".join(lines), encoding="utf-8")
+    print("Saved markdown graph cost analysis to:", md_path)
 
 
 if __name__ == "__main__":
