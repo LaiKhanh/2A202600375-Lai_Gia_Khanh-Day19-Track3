@@ -6,3 +6,4 @@ openai
 langchain-openai
 wikipedia
 python-dotenv
+chromadb
