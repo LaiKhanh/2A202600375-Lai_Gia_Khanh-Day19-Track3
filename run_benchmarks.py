@@ -57,6 +57,89 @@ def escape_cell(s: str):
     return s
 
 
+def extract_response(answer_str):
+    """Try to extract a concise 'response' text from an LLM output.
+
+    Handles:
+    - plain JSON strings with a top-level 'response' or 'text' key
+    - JSON-like substrings inside larger text
+    - simple 'Response: ...' patterns
+    Fallback: return the original string.
+    """
+    if answer_str is None:
+        return ""
+
+    if not isinstance(answer_str, str):
+        return str(answer_str)
+
+    s = answer_str.strip()
+
+    # Try parse full string as JSON
+    try:
+        obj = json.loads(s)
+        if isinstance(obj, dict):
+            for key in ("response", "text", "output", "result", "answer"):
+                if key in obj:
+                    return obj[key]
+            # common nested shapes
+            if "choices" in obj and isinstance(obj["choices"], list) and obj["choices"]:
+                first = obj["choices"][0]
+                if isinstance(first, dict):
+                    for k in ("text", "message", "content"):
+                        if k in first:
+                            v = first[k]
+                            if isinstance(v, dict) and "content" in v:
+                                return v["content"]
+                            return v
+        else:
+            return str(obj)
+    except Exception:
+        pass
+
+    # Try to find a JSON substring and parse it
+    start = s.find("{")
+    if start != -1:
+        depth = 0
+        in_string = False
+        escape = False
+        for i in range(start, len(s)):
+            ch = s[i]
+            if ch == '"' and not escape:
+                in_string = not in_string
+            if ch == '\\' and not escape:
+                escape = True
+                continue
+            else:
+                escape = False
+            if not in_string:
+                if ch == '{':
+                    depth += 1
+                elif ch == '}':
+                    depth -= 1
+                    if depth == 0:
+                        candidate = s[start:i+1]
+                        try:
+                            obj = json.loads(candidate)
+                            if isinstance(obj, dict):
+                                for key in ("response", "text", "output", "result", "answer"):
+                                    if key in obj:
+                                        return obj[key]
+                                return json.dumps(obj)
+                        except Exception:
+                            break
+
+    # Regex fallback for explicit response fields
+    m = re.search(r'"response"\s*:\s*"([^"]+)"', s)
+    if m:
+        return m.group(1)
+
+    m = re.search(r'(?:Response|response)\s*[:\-]\s*(.+)$', s, re.IGNORECASE)
+    if m:
+        return m.group(1).strip()
+
+    return s
+
+
 def main():
     data = load_benchmark()
 
@@ -118,11 +201,17 @@ def main():
         else:
             graph_ans = "GRAPH_RAG_NOT_AVAILABLE"
 
+        # extract concise response text for markdown reporting
+        flat_resp = extract_response(flat_ans)
+        graph_resp = extract_response(graph_ans)
+
         results.append({
             "id": idx,
             "question": q,
             "flat_rag_answer": flat_ans,
-            "graph_rag_answer": graph_ans
+            "flat_rag_response": flat_resp,
+            "graph_rag_answer": graph_ans,
+            "graph_rag_response": graph_resp
         })
 
     # save json
@@ -137,7 +226,7 @@ def main():
 
     for r in results:
         md_lines.append(
-            f"| {r['id']} | {escape_cell(r['question'])} | {escape_cell(r['flat_rag_answer'])} | {escape_cell(r['graph_rag_answer'])} |"
+            f"| {r['id']} | {escape_cell(r['question'])} | {escape_cell(r.get('flat_rag_response',''))} | {escape_cell(r.get('graph_rag_response',''))} |"
         )
 
     RESULTS_MD.write_text("\n".join(md_lines), encoding="utf-8")

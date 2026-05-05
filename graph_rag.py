@@ -1,9 +1,8 @@
 import os
 import sys
 from neo4j import GraphDatabase
-import google.generativeai as genai
-
 import dotenv
+import llm_client
 
 dotenv.load_dotenv()
 
@@ -32,15 +31,10 @@ def answer(question, entity):
     Question:
     {question}
     """
-    API_KEY = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY") or os.getenv("GENAI_API_KEY")
-    if not API_KEY:
-        sys.exit(
-            "No API key found. Set the GEMINI_API_KEY (or GOOGLE_API_KEY / GENAI_API_KEY) environment variable."
-        )
-
-    genai.configure(api_key=API_KEY)
-    model = genai.GenerativeModel(os.getenv("GEMINI_MODEL"))
-    return model.generate_content(prompt).text
+    return llm_client.generate(
+        prompt,
+        model=os.getenv("LLM_MODEL") or os.getenv("GEMINI_MODEL") or "gpt-oss:20b-cloud",
+    )
 
 if __name__ == "__main__":
     print(answer(

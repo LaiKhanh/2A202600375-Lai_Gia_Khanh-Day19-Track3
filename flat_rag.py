@@ -14,7 +14,9 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=GEMINI_API_KEY)
 
 EMBED_MODEL = os.getenv("GEMINI_EMBEDDING_MODEL")
-CHAT_MODEL = genai.GenerativeModel(os.getenv("GEMINI_MODEL"))
+
+# Use llm_client.generate() for text generation so we can target Ollama if configured.
+import llm_client
 
 DATA_DIR = Path("data/raw_articles")
 CHROMA_PATH = "./chroma_db"
@@ -147,9 +149,12 @@ def answer_query(query):
         {query}
     """
 
-    response = CHAT_MODEL.generate_content(prompt)
+    response_text = llm_client.generate(
+        prompt,
+        model=os.getenv("LLM_MODEL") or os.getenv("GEMINI_MODEL") or "gpt-oss:20b-cloud",
+    )
 
-    return response.text
+    return response_text
 
 
 # =========================
