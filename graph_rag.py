@@ -5,7 +5,6 @@ import google.generativeai as genai
 
 import dotenv
 
-from extract_graph import API_KEY
 dotenv.load_dotenv()
 
 driver = GraphDatabase.driver(
@@ -43,7 +42,8 @@ def answer(question, entity):
     model = genai.GenerativeModel(os.getenv("GEMINI_MODEL"))
     return model.generate_content(prompt).text
 
-print(answer(
-    "Who is the founder of OPENAI?",
-    "OPENAI"
-))
+if __name__ == "__main__":
+    print(answer(
+        "Who is the founder of OPENAI?",
+        "OPENAI"
+    ))

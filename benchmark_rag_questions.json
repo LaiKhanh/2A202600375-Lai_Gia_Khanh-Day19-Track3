@@ -1,0 +1,102 @@
+[
+  {
+    "question": "In what year was Mistral AI founded?",
+    "ground_truth": "2023",
+    "difficulties": "easy"
+  },
+  {
+    "question": "Who is the CEO of Perplexity AI?",
+    "ground_truth": "Aravind Srinivas",
+    "difficulties": "easy"
+  },
+  {
+    "question": "Name an investor that funded both Perplexity AI and OpenAI.",
+    "ground_truth": "Nvidia",
+    "difficulties": "medium (multi-hop)"
+  },
+  {
+    "question": "Which occurred first: Perplexity launching its main search engine or Perplexity reporting two million unique visitors?",
+    "ground_truth": "Launching its main search engine (December 7, 2022) occurred before reporting two million unique visitors (February 2023).",
+    "difficulties": "medium (timeline, multi-hop)"
+  },
+  {
+    "question": "What is the Perplexity feature that lets users compare outputs from multiple language models, and when was it introduced?",
+    "ground_truth": "Model Council; introduced February 5, 2026.",
+    "difficulties": "hard (date + multi-hop)"
+  },
+  {
+    "question": "Which company acquired Bun in December 2025 to improve a coding assistant?",
+    "ground_truth": "Anthropic",
+    "difficulties": "hard (multi-hop, hallucination-prone)"
+  },
+  {
+    "question": "What was the name of Anthropic's confidential operation that involved purchasing and scanning used books for model training?",
+    "ground_truth": "Project Panama",
+    "difficulties": "hard (obscure, hallucination-prone)"
+  },
+  {
+    "question": "What practice did Cloudflare allege Perplexity used that bypassed website protections and robots.txt?",
+    "ground_truth": "Using undeclared \"stealth\" web crawlers that bypassed robots.txt and web application firewalls.",
+    "difficulties": "medium (controversy, provenance)"
+  },
+  {
+    "question": "Perplexity's real-time search engine 'Sonar' is based on which model family?",
+    "ground_truth": "Meta's LLaMA (Llama) model.",
+    "difficulties": "medium (factual, hallucination-prone)"
+  },
+  {
+    "question": "As of early 2026, which company had the higher reported valuation: Perplexity AI or Anthropic?",
+    "ground_truth": "Anthropic (≈ $380 billion) had a higher valuation than Perplexity AI (≈ $21.21 billion).",
+    "difficulties": "medium (comparative)"
+  },
+  {
+    "question": "What did Perplexity discontinue when it shifted to a subscription-first model in February 2026?",
+    "ground_truth": "AI-integrated advertising (they moved away from AI-integrated ads).",
+    "difficulties": "medium (policy change)"
+  },
+  {
+    "question": "Which Japanese newspaper filed a lawsuit against Perplexity in August 2025 for 'free-riding' on its articles?",
+    "ground_truth": "Yomiuri Shimbun",
+    "difficulties": "hard (legal, hallucination-prone)"
+  },
+  {
+    "question": "Who were the three co-founders of Mistral AI?",
+    "ground_truth": "Arthur Mensch; Guillaume Lample; Timothée Lacroix.",
+    "difficulties": "medium (entity list)"
+  },
+  {
+    "question": "Based on the April 2024 and June 2025 funding reports, approximately how much capital had Perplexity raised by mid-2025?",
+    "ground_truth": "Approximately $665 million (165M in April 2024 + 500M in June 2025).",
+    "difficulties": "hard (numeric aggregation, multi-source)"
+  },
+  {
+    "question": "Which Perplexity product launched in July 2025 and was later released for free download in October 2025?",
+    "ground_truth": "Comet (an AI browser)",
+    "difficulties": "medium (timeline)"
+  },
+  {
+    "question": "Which company's 'Claude' models are available via Amazon Bedrock, and what core focus does the company emphasize?",
+    "ground_truth": "Anthropic's 'Claude' models are available via Amazon Bedrock; Anthropic emphasizes AI safety.",
+    "difficulties": "hard (multi-part)"
+  },
+  {
+    "question": "Which firm sued Perplexity in 2025 alleging trademark infringement and had declined Perplexity's offer to purchase the trademark in 2023?",
+    "ground_truth": "Perplexity Solved Solutions (PSS)",
+    "difficulties": "hard (legal, hallucination-prone)"
+  },
+  {
+    "question": "Which Perplexity feature allows Pro users to search uploaded documents alongside web content?",
+    "ground_truth": "Internal Knowledge Search (Perplexity's Internal Knowledge Search for Pro and Enterprise users).",
+    "difficulties": "medium (feature lookup)"
+  },
+  {
+    "question": "Name one major media organization that publicly accused Perplexity of using its content without permission.",
+    "ground_truth": "The New York Times (others include BBC, Forbes, Dow Jones).",
+    "difficulties": "medium (controversy, multi-source)"
+  },
+  {
+    "question": "Give the list of OpenAI's founders as reported in the provided text.",
+    "ground_truth": "Elon Musk; Sam Altman; Ilya Sutskever; Greg Brockman; Trevor Blackwell; Vicki Cheung; Andrej Karpathy; Durk Kingma; John Schulman; Pamela Vagata; Wojciech Zaremba.",
+    "difficulties": "very hard (long list, hallucination-prone)"
+  }
+]
