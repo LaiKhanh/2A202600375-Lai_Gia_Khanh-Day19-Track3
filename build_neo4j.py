@@ -84,21 +84,38 @@ def create_constraints():
 
 
 def push_triple(tx, triple):
-    query = """
-    MERGE (a:Entity {name:$subject})
+    ALLOWED_RELATIONS = {
+        "FOUNDED_BY",
+        "FOUNDED_IN",
+        "WORKED_AT",
+        "ACQUIRED_BY",
+        "INVESTED_BY",
+        "LOCATED_IN",
+        "DEVELOPED",
+        "PARTNERS_WITH",
+        "COMPETES_WITH",
+        "CEO_OF"
+    }
+
+    relation = triple["relation"]
+
+    if relation not in ALLOWED_RELATIONS:
+        return
+
+    query = f"""
+    MERGE (a:Entity {{name:$subject}})
     ON CREATE SET a.type = $subject_type
 
-    MERGE (b:Entity {name:$object})
+    MERGE (b:Entity {{name:$object}})
     ON CREATE SET b.type = $object_type
 
-    MERGE (a)-[r:RELATION {type:$relation}]->(b)
+    MERGE (a)-[:{relation}]->(b)
     """
 
     tx.run(
         query,
         subject=triple["subject"],
         subject_type=triple["subject_type"],
-        relation=triple["relation"],
         object=triple["object"],
         object_type=triple["object_type"]
     )
