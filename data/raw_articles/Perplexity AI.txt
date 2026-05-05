@@ -1,0 +1,91 @@
+Perplexity AI, Inc., or simply Perplexity, is an American privately held software company offering a web search engine that processes user queries and synthesizes responses. Perplexity products use large language models and incorporate real-time web search capabilities, providing responses based on current Internet content, citing sources used. Its real-time search engine is called Sonar and is based on Meta's Llama model. A free public version is available, while a paid Pro subscription offers access to more advanced language models and additional features. 
+Perplexity AI, Inc., was founded in August 2022 by Aravind Srinivas, Denis Yarats, Johnny Ho, and Andy Konwinski. As of September 2025, the company was valued at US$20 billion.
+Perplexity AI has attracted legal scrutiny over allegations of copyright infringement, unauthorized content use, and trademark issues from several major media organizations, including the BBC, Dow Jones, and The New York Times. According to separate analyses by Wired and later Cloudflare, Perplexity uses undisclosed web crawlers with spoofed user-agent strings to scrape the content of websites which prohibit, or explicitly block, web scraping.
+
+
+== History ==
+In August 2022, Perplexity AI, Inc., was founded by Aravind Srinivas, Denis Yarats, Johnny Ho, and Andy Konwinski, engineers with backgrounds in back-end systems, artificial intelligence (AI) and machine learning. It launched its main search engine on December 7, 2022, and has since released a Google Chrome extension and apps for iOS and Android. In February 2023, Perplexity reported two million unique visitors. By April 2024, Perplexity had raised $165 million in funding, valuing the company at over $1 billion. As of June 2025, Perplexity closed a $500 million round of funding that elevated its valuation to $14 billion. Investors in Perplexity AI have included Jeff Bezos, Tobias Lütke, Nat Friedman, Nvidia, and Databricks. Perplexity has also received funding from 1789 Capital, a venture capital firm notable for its association with Donald Trump Jr.  During Bloomberg’s Tech Summit 2025, Srinivas shared that the company processed 780 million queries in May 2025, experiencing more than 20% month-over-month growth, processing around 30 million queries daily.
+In July 2024, Perplexity announced the launch of a new publishers' program to share advertising revenue with partners.
+On January 18, 2025, the day before the impending U.S. ban on the social media app TikTok, Perplexity submitted a proposal for a merger with TikTok US.
+On August 12, 2025, Perplexity made a bid to buy Chrome from Google for $34.5 billion. Perplexity stated that the sale could remedy anti-trust litigation against Google, in which a judge was considering compelling the sale of Chrome. 
+In December 2025, Cristiano Ronaldo took an undisclosed stake in Perplexity AI and entered a global brand partnership with the company.
+
+
+=== Business Strategy and Finance (2026) ===
+As of early 2026, Perplexity AI reached a valuation of $21.21 billion following its Series E-6 funding round . The company's Annual Recurring Revenue (ARR) grew from $80 million in late 2024 to an estimated $200 million by February 2026 . In January 2026, the company entered into a three-year, $750 million commitment with Microsoft Azure to secure the GPU capacity required for its advanced "Deep Research" and "Model Council" features . 
+In February 2026, Perplexity transitioned to a subscription-first model by discontinuing its AI-integrated advertising strategy . Leadership stated the move was intended to preserve user trust in the "answer engine," prioritizing objective results over ad revenue . 
+The company also introduced the "Model Council" feature on February 5, 2026, which allows users to compare outputs from multiple large language models, such as GPT-5.2 and Claude 4.6, simultaneously . To expand its user base, Perplexity began offering a free year of Pro access to students, U.S. Military Veterans, and government employees .
+
+
+== Products and services ==
+ 
+
+
+=== Search engine web portal ===
+Perplexity’s primary offering is an online information retrieval system (search engine) that uses large language models to generate responses to user queries by searching and summarizing web-based content. Perplexity offers a feature known as Perplexity Pages that generates structured summaries and report-like content from user queries by aggregating cited sources. Perplexity is available without charge or registration to Web users, a freemium model.
+
+
+=== Perplexity Pro ===
+Perplexity Pro is a subscription tier, a more capable paid "enterprise" service, including stronger security and data protection and additional tools, including the ability to search uploaded documents alongside web content and access to a programmatic application programming interface (API). It allows the user to select between backend models such as GPT-5.4, Claude 4.6 and Gemini 3.1 Pro. The company has also developed its own models, Sonar (based on Llama 3.3) and R1 1776 (based on DeepSeek R1).
+
+
+=== Internal Knowledge Search ===
+Internal Knowledge Search enables Pro and Enterprise Pro users to simultaneously search across web content and internal documents. Users can upload and search through Excel, Word, PDF, and other common file formats. Enterprise Pro users can upload and index up to 500 files.
+
+
+=== Search API ===
+Perplexity's Search API provides AI developers with programmatic access to the company's search infrastructure. The September 2025 release includes a software development kit, an open-source evaluation framework called search_evals, and documentation detailing the API's design and optimization.
+
+
+=== Shopping hub ===
+Perplexity's Shopping Hub is an online shopping platform that provides AI-generated product recommendations, and enables users to purchase products directly through Perplexity's interface. It was launched in November 2024 with backing by Amazon and Nvidia.
+
+
+=== Finance ===
+In October 2024, Perplexity AI introduced new finance-related features, including looking up stock prices and company earnings data. The tool provides real-time stock quotes and price tracking, industry peer comparisons and basic financial analysis tools. The platform sources its financial data from Financial Modeling Prep.
+
+
+=== Assistant ===
+In January 2025, Perplexity launched the Perplexity Assistant, an AI-powered tool designed to enhance the functionality of its search engine. It can perform tasks across multiple apps, such as hailing a ride or searching for a song, and can maintain context across actions. The assistant is also multi-modal, meaning it can use a phone's camera to provide answers about the user's surroundings or on-screen content. Perplexity has acknowledged that the assistant is still in development and may not always function as expected. For instance, certain features, such as summarizing unread emails or upcoming calendar events, require users to enable a workaround based on notifications.
+
+
+=== Comet ===
+In July 2025, Perplexity launched Comet, an AI browser based on Chromium. Initially, access to the browser was limited to users subscribed to the most expensive subscription tier. The browser was later released for free download in October 2025. A key feature is integration of the Perplexity search engine, which can perform a variety of tasks such as generating article summaries, describing an image, conducting research about a topic and composing emails.
+
+
+=== Truth Social chatbot ===
+Perplexity has been contracted to produce a chatbot for Donald Trump's social media platform Truth Social.
+
+
+== Leadership ==
+Aravind Srinivas is the CEO and co-founder of Perplexity AI. He previously held research positions at OpenAI, Google DeepMind, and other AI research institutions focusing on machine learning and artificial intelligence. In a March 2026 All-In episode, Srinivas said the incoming AI-related layoffs were "glorious future" to "look forward", as it freed people from jobs they didn't like and gave them opportunities to pursue entrepreneurship.
+
+
+== Controversies ==
+
+
+=== Copyright and trademark infringement allegations ===
+In June 2024, Forbes publicly criticized Perplexity for using their content. According to Forbes, Perplexity published a story largely copied from a proprietary Forbes article without mentioning or prominently citing Forbes. In response, Srinivas said that the feature had some "rough edges" and accepted feedback but maintained that Perplexity only "aggregates" rather than plagiarizes information. 
+In October 2024, The New York Times sent a cease-and-desist notice to Perplexity to stop accessing and using NYT content, claiming that Perplexity is violating its copyright by scraping data from its website. In June 2024, Dow Jones and New York Post filed a lawsuit against Perplexity, alleging copyright infringement. The lawsuit also alleged that Perplexity harmed their brand by attributing hallucinated quotes, for example on F-16 jets for Ukraine, to articles that did not include them. On October 24, 2024, Perplexity AI published an official response on its company blog asserting that the claims in the lawsuits were misleading and stating it was open to revenue-sharing arrangements with content providers. On January 31, 2025, Perplexity was sued in the United States for alleged trademark infringement by Perplexity Solved Solutions (PSS), a software firm founded in 2017. The lawsuit claims that Perplexity AI's use of the name "Perplexity" violates PSS's federally registered trademark and could cause consumer confusion. PSS had previously declined an offer from Perplexity AI to purchase the trademark in 2023. The suit seeks to prevent Perplexity AI from using the name in its branding and marketing. In June 2025, UK broadcaster the BBC threatened legal action against Perplexity AI, demanding that the company stop the unauthorized scraping of its content, delete all retained BBC material used in training its models, and provide financial compensation for the infringement of its intellectual property rights. On August 8, 2025, the Japanese newspaper company Yomiuri Shimbun filed a lawsuit against Perplexity for "free-riding" use of 120,000 articles of the publication from February to June 2025. Later that month, two more Japanese newspaper companies, The Asahi Shimbun and The Nikkei, also sued the company for alleged copyright infringement.
+In October 2025, Reddit sued Perplexity in federal court in New York, alleging that it and three other companies unlawfully scraped its data.
+
+
+=== Stealth web crawlers ===
+In June 2024, separate investigations by the magazine Wired and web developer Robb Knight found that Perplexity does not respect the Robot Exclusion Protocol (or robots.txt) standard, which may include requests for web crawlers to not scrape sections of the site's content, despite Perplexity claiming the opposite. Perplexity lists the IP address ranges and user agent strings of their web crawlers publicly, but according to Wired and Robb Knight it uses undisclosed IP addresses and spoofed user agent strings when ignoring robots.txt. In response, Srinivas stated that Perplexity was not ignoring robots.txt, but suggested that it relied on third-party web crawlers that do. When asked, Srinivas declined to commit to cease scraping Wired content using third parties.
+In August 2025, Cloudflare published research finding that Perplexity was using undeclared "stealth" web crawlers to bypass web application firewalls intended to block Perplexity crawlers, and did not respect robots.txt files. Cloudflare's CEO Matthew Prince tweeted that Perplexity acts "more like North Korean hackers" than a reputable AI company. Perplexity publicly denied the claims, calling it a "charlatan publicity stunt".
+
+
+== See also ==
+OpenAI – Artificial intelligence corporation
+Anthropic – Artificial intelligence research laboratory
+Google DeepMind – AI research laboratory
+Meta AI - AI corporation
+xAI – AI corporation
+
+
+== References ==
+
+
+== External links ==
+
+Official website
