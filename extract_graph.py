@@ -9,7 +9,6 @@ import dotenv
 dotenv.load_dotenv()
 
 API_KEY = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY") or os.getenv("GENAI_API_KEY")
-print(API_KEY)
 if not API_KEY:
     sys.exit(
         "No API key found. Set the GEMINI_API_KEY (or GOOGLE_API_KEY / GENAI_API_KEY) environment variable."
